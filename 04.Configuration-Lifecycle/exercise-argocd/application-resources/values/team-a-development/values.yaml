@@ -18,8 +18,8 @@ quota:
   #specifies the limit ranges for the chart
 limits:
   default:
-    cpu: 200m
-    memory: 512Mi
+    cpu: 400m
+    memory: 1Gi
   defaultRequest:
     cpu: 100m
     memory: 256Mi
