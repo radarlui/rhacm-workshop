@@ -1,3 +1,25 @@
 application:
   content: "<h1>Production Application</h1>"
 namespace: team-a-prod
+#specifies the quota to be used for resources
+quota:
+  requests:
+    cpu: '1'
+    memory: 1Gi
+  limits:
+    cpu: '2'
+    memory: 2Gi
+  pods: "10"
+  persistentvolumeclaims: "20"
+  resourcequotas: "1"
+  services: "10"
+
+  #specifies the limit ranges for the chart
+limits:
+  default:
+    cpu: 200m
+    memory: 512Mi
+  defaultRequest:
+    cpu: 100m
+    memory: 256Mi
+  type: Container
